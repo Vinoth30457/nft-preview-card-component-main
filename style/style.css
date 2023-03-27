@@ -11,8 +11,123 @@ img {
 html {
   font-family: "Outfit", sans-serif;
 }
+:root {
+  --radius: 0.85rem;
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
 body {
   font-size: 18px;
   width: 100vw;
   height: 100vh;
+}
+body {
+  background-color: var(--main-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  background-color: var(--card-bg);
+  width: 18.5rem;
+  height: auto;
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  box-shadow: 12px 12px 18px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.card-main-img {
+  width: 16rem;
+  position: relative;
+}
+.card-img {
+  border-radius: var(--radius);
+  position: relative;
+}
+.overlay {
+  background-color: var(--cyan);
+  border-radius: var(--radius);
+  width: 16rem;
+  height: 16rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.card-main-img:hover .overlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.icon {
+  width: 2rem;
+}
+.card-title {
+  color: var(--white);
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+.card-title:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+.card-description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--soft-blue);
+  opacity: 0.5;
+}
+.card-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-left-details,
+.card-right-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card-left-text {
+  color: var(--cyan);
+}
+.card-right-text {
+  color: var(--soft-blue);
+  opacity: 0.75;
+}
+.card-divider {
+  border: 1px solid var(--line);
+}
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: row;
+}
+.author-img-container {
+  width: 1.8rem;
+}
+.author-img {
+  margin-top: 0.5rem;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+.author-text {
+  color: var(--soft-blue);
+  opacity: 0.75;
+}
+.text-white {
+  color: var(--white);
+}
+.text-white:hover {
+  color: var(--cyan);
+  cursor: pointer;
 }
