@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+html {
+  font-family: "Outfit", sans-serif;
+}
+body {
+  font-size: 18px;
+  width: 100vw;
+  height: 100vh;
+}
